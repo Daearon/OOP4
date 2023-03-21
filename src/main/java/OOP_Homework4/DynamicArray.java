@@ -183,8 +183,7 @@ public class DynamicArray<T extends Object> {
 
     public T getElement(int index) {
         if (index < 0 || index >= size) {
-            System.out.println("Индекс находится за пределами допустимых значений");
-            return null;
+            throw new IndexOutOfBorderException();
         } else {
             return array[index];
         }
@@ -192,7 +191,7 @@ public class DynamicArray<T extends Object> {
 
     public void setElement(int index, T element) {
         if (index < 0 || index >= this.size) {
-            System.out.println("Индекс находится за пределами допустимых значений");
+            throw new IndexOutOfBorderException();
         } else {
             this.array[index] = element;
         }

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2292073-24ee-4c10-88c3-13b0b57d4c2d" name="Changes" comment="Make corrections">
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/DynamicArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/DynamicArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsComparableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNotComparableException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNotNumberException.java" afterDir="false" />
-    </list>
+    <list default="true" id="b2292073-24ee-4c10-88c3-13b0b57d4c2d" name="Changes" comment="Make final corrections" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +40,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -61,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679365450241</updated>
-      <workItem from="1679365453724" duration="6934000" />
+      <workItem from="1679365453724" duration="7141000" />
     </task>
     <task id="LOCAL-00001" summary="Completed fourth homework">
       <created>1679368843268</created>
@@ -77,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679378582924</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Make final corrections">
+      <created>1679378839652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679378839652</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed fourth homework" />
     <MESSAGE value="Make corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make corrections" />
+    <MESSAGE value="Make final corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make final corrections" />
   </component>
 </project>
