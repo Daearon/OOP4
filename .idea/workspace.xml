@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2292073-24ee-4c10-88c3-13b0b57d4c2d" name="Changes" comment="Completed fourth homework">
-      <change afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ArrayIsEmptyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsComparableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNumberException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b2292073-24ee-4c10-88c3-13b0b57d4c2d" name="Changes" comment="Make corrections">
       <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/DynamicArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/DynamicArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsComparableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNotComparableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OOP_Homework4/ElementIsNotNumberException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679365450241</updated>
-      <workItem from="1679365453724" duration="6634000" />
+      <workItem from="1679365453724" duration="6934000" />
     </task>
     <task id="LOCAL-00001" summary="Completed fourth homework">
       <created>1679368843268</created>
@@ -72,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679368843268</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make corrections">
+      <created>1679378582924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679378582924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed fourth homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed fourth homework" />
+    <MESSAGE value="Make corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make corrections" />
   </component>
 </project>

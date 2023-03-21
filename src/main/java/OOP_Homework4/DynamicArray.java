@@ -53,7 +53,7 @@ public class DynamicArray<T extends Object> {
         }
         T min = array[0];
         if (!(min instanceof Comparable<?>)){
-            throw new ElementIsComparableException();
+            throw new ElementIsNotComparableException();
         }
         for (int i = 1; i < size; i++) {
             if (((Comparable<T>) array[i]).compareTo(min) < 0) {
@@ -69,7 +69,7 @@ public class DynamicArray<T extends Object> {
         }
         T max = array[0];
         if (!(max instanceof Comparable<?>)){
-            throw new ElementIsComparableException();
+            throw new ElementIsNotComparableException();
         }
         for (int i = 1; i < size; i++) {
             if (((Comparable<T>) array[i]).compareTo(max) > 0) {
@@ -84,7 +84,7 @@ public class DynamicArray<T extends Object> {
             throw new ArrayIsEmptyException();
         }
         if (!(array[0] instanceof Number)){
-            throw new ElementIsNumberException();
+            throw new ElementIsNotNumberException();
         }
         Number sum = 0;
         for (int i = 0; i < size; i++) {
@@ -98,7 +98,7 @@ public class DynamicArray<T extends Object> {
             throw new ArrayIsEmptyException();
         }
         if (!(array[0] instanceof Number)){
-            throw new ElementIsNumberException();
+            throw new ElementIsNotNumberException();
         }
         Number product = (Number) array[0];
         for (int i = 1; i < size; i++) {
@@ -130,7 +130,7 @@ public class DynamicArray<T extends Object> {
             throw new ArrayIsEmptyException();
         }
         if (!(array[0] instanceof Comparable<?>)){
-            throw new RuntimeException("Элемент должен быть Comparable");
+            throw new ElementIsNotComparableException();
         }
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
@@ -148,7 +148,7 @@ public class DynamicArray<T extends Object> {
             throw new ArrayIsEmptyException();
         }
         if (!(array[0] instanceof Comparable<?>)){
-            throw new RuntimeException("Элемент должен быть Comparable");
+            throw new ElementIsNotComparableException();
         }
         for (int i = 1; i < size; i++) {
             T key = array[i];
@@ -166,7 +166,7 @@ public class DynamicArray<T extends Object> {
             throw new ArrayIsEmptyException();
         }
         if (!(array[0] instanceof Comparable<?>)){
-            throw new RuntimeException("Элемент должен быть Comparable");
+            throw new ElementIsNotComparableException();
         }
         for (int i = 0; i < size - 1; i++) {
             int minIndex = i;
