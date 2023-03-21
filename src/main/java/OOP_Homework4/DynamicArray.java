@@ -2,20 +2,23 @@ package OOP_Homework4;
 
 import java.util.Objects;
 
-public class DynamicArray<T extends Number> {
+public class DynamicArray<T extends Object> {
 
     private T[] array;
     private int size;
 
+    @SuppressWarnings("unchecked")
     public DynamicArray() {
-        this.array = (T[]) new Number[10];
+        this.array = (T[]) new Object[10];
         this.size = 0;
     }
+    @SuppressWarnings("unchecked")
     public DynamicArray(T[] data) {
-        this.array = (T[]) new Number[data.length];
+        this.array = (T[]) new Object[data.length];
         System.arraycopy(data, 0, this.array, 0, data.length);
         this.size = data.length;
     }
+    @SuppressWarnings("unchecked")
     public void add(T element) {
         if (this.size == this.array.length) {
             T[] newArray = (T[]) new Object[this.size * 2];
@@ -37,18 +40,21 @@ public class DynamicArray<T extends Number> {
             this.size--;
         }
     }
-
+    @SuppressWarnings("unchecked")
     public void clear() {
-        this.array = (T[]) new Number[10];
+        this.array = (T[]) new Object[10];
         this.size = 0;
     }
 
+
     public T getMinimum() {
         if (size == 0) {
-            System.out.println("Массив пуст");
-            return null;
+            throw new ArrayIsEmptyException();
         }
         T min = array[0];
+        if (!(min instanceof Comparable<?>)){
+            throw new ElementIsComparableException();
+        }
         for (int i = 1; i < size; i++) {
             if (((Comparable<T>) array[i]).compareTo(min) < 0) {
                 min = array[i];
@@ -59,10 +65,12 @@ public class DynamicArray<T extends Number> {
 
     public T getMaximum() {
         if (size == 0) {
-            System.out.println("Массив пуст");
-            return null;
+            throw new ArrayIsEmptyException();
         }
         T max = array[0];
+        if (!(max instanceof Comparable<?>)){
+            throw new ElementIsComparableException();
+        }
         for (int i = 1; i < size; i++) {
             if (((Comparable<T>) array[i]).compareTo(max) > 0) {
                 max = array[i];
@@ -72,27 +80,31 @@ public class DynamicArray<T extends Number> {
     }
 
     public T sum() {
-        T sum = null;
-        for (int i = 0; i < size; i++) {
-            if (i == 0) {
-                sum = array[i];
-            } else {
-                sum = (T) new Double(sum.doubleValue() + array[i].doubleValue());
-            }
+        if (size == 0) {
+            throw new ArrayIsEmptyException();
         }
-        return sum;
+        if (!(array[0] instanceof Number)){
+            throw new ElementIsNumberException();
+        }
+        Number sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum = sum.doubleValue() + ((Number) array[i]).doubleValue();
+        }
+        return (T) sum;
     }
 
     public T product() {
-        T product = null;
-        for (int i = 0; i < size; i++) {
-            if (i == 0) {
-                product = array[i];
-            } else {
-                product = (T) new Double(product.doubleValue() * array[i].doubleValue());
-            }
+        if (size == 0) {
+            throw new ArrayIsEmptyException();
         }
-        return product;
+        if (!(array[0] instanceof Number)){
+            throw new ElementIsNumberException();
+        }
+        Number product = (Number) array[0];
+        for (int i = 1; i < size; i++) {
+            product = product.doubleValue() * ((Number) array[i]).doubleValue();
+        }
+        return (T) product;
     }
 
     public int findIndex(T element) {
@@ -114,9 +126,15 @@ public class DynamicArray<T extends Number> {
     }
 
     public void bubbleSort() {
+        if (size == 0) {
+            throw new ArrayIsEmptyException();
+        }
+        if (!(array[0] instanceof Comparable<?>)){
+            throw new RuntimeException("Элемент должен быть Comparable");
+        }
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
-                if (array[j].doubleValue() > array[j + 1].doubleValue()) {
+                if (((Comparable<T>) array[j]).compareTo(array[j+1]) > 0) {
                     T temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
@@ -126,10 +144,16 @@ public class DynamicArray<T extends Number> {
     }
 
     public void insertionSort() {
+        if (size == 0) {
+            throw new ArrayIsEmptyException();
+        }
+        if (!(array[0] instanceof Comparable<?>)){
+            throw new RuntimeException("Элемент должен быть Comparable");
+        }
         for (int i = 1; i < size; i++) {
             T key = array[i];
             int j = i - 1;
-            while (j >= 0 && array[j].doubleValue() > key.doubleValue()) {
+            while (j >= 0 && ((Comparable<T>) array[j]).compareTo(key) > 0) {
                 array[j + 1] = array[j];
                 j--;
             }
@@ -138,10 +162,16 @@ public class DynamicArray<T extends Number> {
     }
 
     public void selectionSort() {
+        if (size == 0) {
+            throw new ArrayIsEmptyException();
+        }
+        if (!(array[0] instanceof Comparable<?>)){
+            throw new RuntimeException("Элемент должен быть Comparable");
+        }
         for (int i = 0; i < size - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < size; j++) {
-                if (array[j].doubleValue() < array[minIndex].doubleValue()) {
+                if (((Comparable<T>) array[j]).compareTo(array[minIndex]) > 0) {
                     minIndex = j;
                 }
             }
